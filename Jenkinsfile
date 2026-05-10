@@ -32,8 +32,8 @@ pipeline {
 
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') {
-                    sh "${env.SCANNER_HOME}/bin/sonar-scanner \
+                withSonarQubeEnv('sonar-scanner') {
+                    sh "${env.SCANNER_HOME}/bin/sonar-scanner\
                         -Dsonar.projectKey=Ekart-1 \
                         -Dsonar.projectName=Ekart-1 \
                         -Dsonar.java.binaries=target/classes"
