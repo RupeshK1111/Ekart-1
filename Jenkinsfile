@@ -32,7 +32,7 @@ pipeline {
 
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonar-scanner') {
+                withSonarQubeEnv('sonarqube') {
                     sh "${env.SCANNER_HOME}/bin/sonar-scanner \
                         -Dsonar.projectKey=Ekart-1 \
                         -Dsonar.projectName=Ekart-1 \
